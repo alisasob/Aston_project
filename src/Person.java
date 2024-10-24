@@ -23,6 +23,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "[" + getSurname() + ", " + getGender() + ", " + getAge() + "]";
+        return "Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
     }
 }

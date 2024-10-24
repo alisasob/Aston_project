@@ -23,6 +23,6 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "[" + getSpecies() + ", " + getEyeColor() + ", " + isHasHair() + "]";
+        return "Animal:species:" + getSpecies() + ":eyeColor:" + getEyeColor() + ":hasHair:" + isHasHair();
     }
 }

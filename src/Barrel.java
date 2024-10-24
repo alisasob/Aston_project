@@ -23,6 +23,6 @@ public class Barrel {
 
     @Override
     public String toString() {
-        return "[" + getVolume() + ", " + getStoredMaterial() + ", " + getOwnMaterial() + "]";
+        return "Barrel:volume:" + getVolume() + ":storedMaterial:" + getStoredMaterial() + ":ownMaterial:" + getOwnMaterial();
     }
 }
