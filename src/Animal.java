@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Animal {
     private final String species;
     private final String eyeColor;
@@ -19,6 +21,15 @@ public class Animal {
 
     public boolean isHasHair() {
         return hasHair;
+    }
+
+    public static Animal getRandom(){
+        RandomEnumGenerator spe = new RandomEnumGenerator(Species.class);
+        RandomEnumGenerator ec = new RandomEnumGenerator(EyeColor.class);
+        Species species = (Species) spe.randomEnum();
+        EyeColor eyeColor = (EyeColor) ec.randomEnum();
+        Random r = new Random();
+        return new Animal(species.title, eyeColor.title, r.nextBoolean());
     }
 
     @Override

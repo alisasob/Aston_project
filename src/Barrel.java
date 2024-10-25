@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Barrel {
     private final int volume;
     private final String storedMaterial;
@@ -19,6 +21,15 @@ public class Barrel {
 
     public String getStoredMaterial() {
         return storedMaterial;
+    }
+
+    public static Barrel getRandom(){
+        RandomEnumGenerator sm = new RandomEnumGenerator(StoredMaterial.class);
+        RandomEnumGenerator om = new RandomEnumGenerator(OwnMaterial.class);
+        StoredMaterial storedMaterial1 = (StoredMaterial) sm.randomEnum();
+        OwnMaterial ownMaterial1 = (OwnMaterial) om.randomEnum();
+        Random r = new Random();
+        return new Barrel(r.nextInt(1000 - 10) + 10, storedMaterial1.title, ownMaterial1.title);
     }
 
     @Override
