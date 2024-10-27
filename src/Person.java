@@ -23,20 +23,54 @@ public class Person {
         return surname;
     }
 
-    public static Person getRandom(){
+    public static PersonBuilder builder(){
+        return  new PersonBuilder();
+    }
+
+    public static class PersonBuilder{
+
+        private String gender;
+        private int age;
+        private String surname;
+
+        public PersonBuilder gender(String gender){
+            this.gender = gender;
+            return this;
+        }
+
+        public PersonBuilder age(int age){
+            this.age = age;
+            return this;
+
+        }public PersonBuilder surname(String surname){
+            this.surname = surname;
+            return this;
+        }
+
+        public Person getResult(){
+            return new Person(gender, age, surname);
+        }
+    }
+
+    public Person getRandom(){
         RandomEnumGenerator gen = new RandomEnumGenerator(Gender.class);
         Gender gender = (Gender) gen.randomEnum();
         Random r = new Random();
-
+        String surname;
         if (gender.title.equals("male")){
             RandomEnumGenerator sur = new RandomEnumGenerator(MSurname.class);
-            MSurname surname = (MSurname) sur.randomEnum();
-            return new Person(gender.title, r.nextInt(150), surname.title);
+            MSurname msurname = (MSurname) sur.randomEnum();
+            surname = msurname.title;
         } else {
             RandomEnumGenerator sur = new RandomEnumGenerator(FSurname.class);
-            FSurname surname = (FSurname) sur.randomEnum();
-            return new Person(gender.title, r.nextInt(150), surname.title);
+            FSurname fsurname = (FSurname) sur.randomEnum();
+            surname = fsurname.title;
         }
+        return Person.builder()
+                .gender(gender.title)
+                .age(r.nextInt(90))
+                .surname(surname)
+                .getResult();
     }
     @Override
     public String toString() {

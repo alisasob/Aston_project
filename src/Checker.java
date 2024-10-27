@@ -43,19 +43,15 @@ public class Checker {
                     if (Integer.parseInt(p[4]) >= 0 && Integer.parseInt(p[4]) <= 150){
                         return true;
                     } else {
-                        System.out.println("its age");
                         return false;
                     }
                 } catch (NumberFormatException e){
-                    System.out.println("its catch");
                     return false;
                 }
             } else {
-                System.out.println("its name");
                 return false;
             }
         } else {
-            System.out.println("its person");
             return false;
         }
     }

@@ -23,15 +23,47 @@ public class Animal {
         return hasHair;
     }
 
-    public static Animal getRandom(){
+    public static AnimalBuilder builder(){
+        return  new AnimalBuilder();
+    }
+
+    public static class AnimalBuilder{
+        private String species;
+        private String eyeColor;
+        private boolean hasHair;
+
+        public AnimalBuilder species(String species){
+            this.species = species;
+            return this;
+        }
+
+        public AnimalBuilder eyeColor(String eyeColor){
+            this.eyeColor = eyeColor;
+            return this;
+
+        }public AnimalBuilder hasHair(boolean hasHair){
+            this.hasHair = hasHair;
+            return this;
+        }
+
+        public Animal getResult(){
+            return new Animal(species, eyeColor, hasHair);
+        }
+    }
+
+
+    public Animal getRandom(){
         RandomEnumGenerator spe = new RandomEnumGenerator(Species.class);
         RandomEnumGenerator ec = new RandomEnumGenerator(EyeColor.class);
         Species species = (Species) spe.randomEnum();
         EyeColor eyeColor = (EyeColor) ec.randomEnum();
         Random r = new Random();
-        return new Animal(species.title, eyeColor.title, r.nextBoolean());
+        return Animal.builder()
+                     .species(species.title)
+                     .eyeColor(eyeColor.title)
+                     .hasHair(r.nextBoolean())
+                     .getResult();
     }
-
     @Override
     public String toString() {
         return "Animal:species:" + getSpecies() + ":eyeColor:" + getEyeColor() + ":hasHair:" + isHasHair();
