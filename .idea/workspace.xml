@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="random generation added">
-      <change afterPath="$PROJECT_DIR$/src/ConsoleInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Context.java" afterDir="false" />
+    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="main menu added">
+      <change afterPath="$PROJECT_DIR$/src/InputContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OutputToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnimalBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Barrel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BarrelBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputFromFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collection.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Builder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PersonBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +80,7 @@
       <workItem from="1729762687990" duration="23318000" />
       <workItem from="1729897761777" duration="1912000" />
       <workItem from="1729907108198" duration="2835000" />
-      <workItem from="1729934100211" duration="22606000" />
+      <workItem from="1729934100211" duration="27623000" />
     </task>
     <task id="LOCAL-00001" summary="check of data added">
       <created>1729805997802</created>
@@ -104,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729899387409</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="main menu added">
+      <created>1730055884389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730055884389</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +136,7 @@
     <MESSAGE value="basic classes created (Animal, Barrel, Person and Builders)" />
     <MESSAGE value="check of data added" />
     <MESSAGE value="random generation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="random generation added" />
+    <MESSAGE value="main menu added" />
+    <option name="LAST_COMMIT_MESSAGE" value="main menu added" />
   </component>
 </project>
