@@ -1,58 +1,66 @@
-package main.java.input;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import main.java.builder.AnimalBuilder;
-import main.java.builder.BarrelBuilder;
-import main.java.builder.PersonBuilder;
 
-public class InputFromFile implements InputStrategy<File> {
+public class InputFromFile implements InputStrategy{
     @Override
-    public ArrayList<Object> getValues(File file) {
-        AnimalBuilder ab = new AnimalBuilder();
-        BarrelBuilder bb = new BarrelBuilder();
-        PersonBuilder pb = new PersonBuilder();
+    public ArrayList<Object> getValues() {
         ArrayList<Object> objectList = new ArrayList<>();
+        System.out.println("Input name of file:");
+        Scanner console = new Scanner(System.in);
+        String fileName = console.nextLine();
+        File file = new File(fileName);
         try{
             Scanner scanner = new Scanner(file);
             List<String> stringList = new ArrayList<>();
             while (scanner.hasNextLine()){
                 stringList.add(scanner.nextLine());
             }
+            if (stringList.size() == 0){
+                System.out.println("File is empty");
+                return objectList;
+            }
             String[] temp;
             for (String string : stringList){
                 temp = string.split(":");
-                if (temp.length != 7){
-                    System.out.println("Invalid data format");
-                    break;
-                }
-                //System.out.println(Arrays.toString(temp));
-                //System.out.println(temp.length);
-                //System.out.println(temp[0]);
-                if (Checker.checkAnimal(temp)) {
-                    ab.setValues(temp[2], temp[4], Boolean.parseBoolean(temp[6]));
-                    objectList.add(ab.getResult());
-                    //System.out.println(ab.getResult());
-                }
-                else if (Checker.checkBarrel(temp)) {
-                    bb.setValues(Integer.valueOf(temp[2]), temp[4], temp[6]);
-                    objectList.add(bb.getResult());
-                    //System.out.println(bb.getResult());
-                }
-                else if (Checker.checkPerson(temp)) {
-                    pb.setValues(temp[2], Integer.valueOf(temp[4]), temp[6]);
-                    objectList.add(pb.getResult());
-                    //System.out.println(pb.getResult());
+                if (temp.length == 7) {
+                    //System.out.println(Arrays.toString(temp));
+                    //System.out.println(temp.length);
+                    //System.out.println(temp[0]);
+                    if (temp[0].equals("Animal") && Checker.checkAnimal(temp)) {
+                        objectList.add(Animal.builder()
+                                             .species(temp[2])
+                                             .eyeColor(temp[4])
+                                             .hasHair(Boolean.parseBoolean(temp[6]))
+                                             .getResult());
+                        //System.out.println(ab.getResult());
+                    } else if (temp[0].equals("Barrel") && Checker.checkBarrel(temp)) {
+                        objectList.add(Barrel.builder()
+                                             .volume(Integer.parseInt(temp[2]))
+                                             .storedMaterial(temp[4])
+                                             .ownMaterial(temp[6])
+                                             .getResult());
+                        //System.out.println(bb.getResult());
+                    } else if (temp[0].equals("Person") && Checker.checkPerson(temp)) {
+                        objectList.add(Person.builder()
+                                             .gender(temp[2])
+                                             .age(Integer.parseInt(temp[4]))
+                                             .surname(temp[6])
+                                             .getResult());
+                        //System.out.println(pb.getResult());
+                    }
                 }
                 scanner.close();
             }
         } catch (FileNotFoundException e) {
-            System.out.println("File not found");
+            System.out.println("File not found.");
         }
         //stringList.stream().forEach(System.out::println);
+        if (objectList.size() == 0){
+            System.out.println("Could not input anything. Wrong data format.");
+        }
         return objectList;
     }
 }
