@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Barrel {
+public class Barrel implements Sortable {
     private final int volume;
     private final String storedMaterial;
     private final String ownMaterial;
@@ -35,5 +35,18 @@ public class Barrel {
     @Override
     public String toString() {
         return "Barrel:volume:" + getVolume() + ":storedMaterial:" + getStoredMaterial() + ":ownMaterial:" + getOwnMaterial();
+    }
+
+    @Override
+    public int compareTo(Sortable object) {
+        if (object instanceof Barrel) {
+            // Сравнение по объему
+            return Integer.compare(((Barrel) object).volume, this.volume); // Больший объем идет первым
+        } else if (object instanceof Animal) {
+            return 1; // Barrel идет после Animal
+        } else if (object instanceof Person) {
+            return -1; // Barrel идет перед Person
+        }
+        return 0; // Неизвестный тип
     }
 }
