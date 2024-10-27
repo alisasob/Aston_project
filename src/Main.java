@@ -7,41 +7,48 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) /*throws FileNotFoundException*/ {
+        InputContext inputContext;
         Scanner scanner = new Scanner(System.in);
         String answer = "";
         ArrayList<Object> objectList = new ArrayList<>();
         while (!answer.equals("0")) {
+            System.out.println("------------------------------");
             System.out.println("Menu");
+            System.out.println("------------------------------");
             System.out.println("1. Input objects from console.");
             System.out.println("2. Input objects from file.");
             System.out.println("3. Generate objects randomly.");
             System.out.println("4. Print list of objects.");
+            System.out.println("5. Write list of objects to the file.");
             System.out.println("0. Quit");
             answer = scanner.nextLine();
             switch (answer) {
                 case ("1"):
-                    ConsoleInput consoleInput = new ConsoleInput();
-                    objectList.addAll(consoleInput.getValues());
+                    inputContext = new InputContext(new ConsoleInput());
+                    objectList.addAll(inputContext.inputValues());
                     break;
                 case ("2"):
-                    InputFromFile inputFromFile = new InputFromFile();
-                    objectList.addAll(inputFromFile.getValues());
+                    inputContext = new InputContext(new InputFromFile());
+                    objectList.addAll(inputContext.inputValues());
                     break;
                 case ("3"):
-                    RandomInput randomInput = new RandomInput();
-                    objectList.addAll(randomInput.getValues());
+                    inputContext = new InputContext(new RandomInput());
+                    objectList.addAll(inputContext.inputValues());
                     break;
                 case ("4"):
                     if (objectList.size() == 0){
                         System.out.println("List is empty.");
                     }else {
-                        objectList.stream().forEach(System.out::println);
+                        objectList.forEach(System.out::println);
                     }
+                    break;
+                case ("5"):
+                    OutputToFile.out(objectList);
                     break;
                 case ("0"):
                     return;
                 default:
-                    System.out.println("Wrong input. try again.");
+                    System.out.println("Wrong input. Try again.");
             }
 
         }
