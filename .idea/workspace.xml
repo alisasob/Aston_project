@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="basic classes created (Animal, Barrel, Person and Builders)">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InsertionSorted.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +29,24 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MarySuslo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alisasob/Aston_project.git",
+    "accountId": "fe5aa905-4c61-4192-afa8-f0a0a7570412"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2npN514vqc74peHFNdJO30qOSL8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,7 +59,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "maria",
-    "last_opened_file_path": "C:/Users/Mary/Desktop/jproject/Задания курса/проект/BinarySearcher",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Mary/Desktop/jproject/arstonпроект",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -71,6 +88,15 @@
       <updated>1729665874497</updated>
       <workItem from="1729665877010" duration="8385000" />
     </task>
+    <task id="LOCAL-00001" summary="basic classes created (Animal, Barrel, Person and Builders)">
+      <option name="closed" value="true" />
+      <created>1729937848999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729937848999</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
