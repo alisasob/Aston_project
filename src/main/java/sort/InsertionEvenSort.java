@@ -1,5 +1,6 @@
 package main.java.sort;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import main.java.entity.Animal;
@@ -10,6 +11,7 @@ import main.java.entity.Sortable;
 public class InsertionEvenSort implements SortStrategy {
     @Override
     public void sort(List<Sortable> sortableList) {
+
 
         List<Integer> listPosition = new ArrayList<>();
         List<Sortable> listEven = new ArrayList<>();
@@ -36,10 +38,11 @@ public class InsertionEvenSort implements SortStrategy {
                 }
             }
         }
+
         InsertionSort insertionSort = new InsertionSort();
         insertionSort.sort(listEven);
         for(int i = 0; i < listPosition.size(); i++){
-            sortableList.add(i, listEven.get(i));
+            sortableList.set(i, listEven.get(i));
         }
     }
 }
