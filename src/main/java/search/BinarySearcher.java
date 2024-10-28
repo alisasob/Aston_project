@@ -1,3 +1,5 @@
+package main.java.search;
+
 import java.util.ArrayList;
 import main.java.entity.Sortable;
 
