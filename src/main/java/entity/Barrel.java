@@ -1,14 +1,10 @@
 package main.java.entity;
 
-<<<<<<<< HEAD:src/Barrel.java
-public class Barrel {
-========
 import java.util.Random;
 import main.java.enums.OwnMaterial;
 import main.java.enums.StoredMaterial;
 import main.java.rng.RandomEnumGenerator;
 public class Barrel implements Sortable {
->>>>>>>> 98ac3dd (structure of project edited):src/main/java/entity/Barrel.java
     private final int volume;
     private final String storedMaterial;
     private final String ownMaterial;
@@ -75,5 +71,18 @@ public class Barrel implements Sortable {
     @Override
     public String toString() {
         return "Barrel:volume:" + getVolume() + ":storedMaterial:" + getStoredMaterial() + ":ownMaterial:" + getOwnMaterial();
+    }
+
+    @Override
+    public int compareTo(Sortable object) {
+        if (object instanceof Barrel) {
+            // Сравнение по объему
+            return Integer.compare(((Barrel) object).volume, this.volume); // Больший объем идет первым
+        } else if (object instanceof Animal) {
+            return 1; // Barrel идет после Animal
+        } else if (object instanceof Person) {
+            return -1; // Barrel идет перед Person
+        }
+        return 0; // Неизвестный тип
     }
 }

@@ -1,50 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="writing to file added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/OutputToFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/EyeColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/FSurname.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/MSurname.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/OwnMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Species.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/StoredMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/Checker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/ConsoleInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputFromFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rng/RandomEnumGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rng/RandomInput.java" afterDir="false" />
+    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="structure of project edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Barrel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Checker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConsoleInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Context.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EyeColor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FSurname.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputFromFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MSurname.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputToFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OwnMaterial.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomEnumGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sortable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Species.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StoredMaterial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +96,7 @@
       <workItem from="1729907108198" duration="2835000" />
       <workItem from="1729934100211" duration="27623000" />
       <workItem from="1730116703212" duration="1104000" />
+      <workItem from="1730119418863" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="check of data added">
       <created>1729805997802</created>

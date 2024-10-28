@@ -6,7 +6,7 @@ import main.java.enums.Gender;
 import main.java.enums.MSurname;
 import main.java.rng.RandomEnumGenerator;
 
-public class Person {
+public class Person implements Sortable {
     private final String gender;
     private final int age;
     private final String surname;
@@ -81,5 +81,18 @@ public class Person {
     @Override
     public String toString() {
         return "Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
+    }
+
+    @Override
+    public int compareTo(Sortable object) {
+        if (object instanceof Person) {
+            // Сравнение по возрасту
+            return Integer.compare(((Person) object).age, this.age); // Старший идет первым
+        } else if (object instanceof Animal) {
+            return 1; // Person идет после Animal
+        } else if (object instanceof Barrel) {
+            return 1; // Person идет после Barrel
+        }
+        return 0; // Неизвестный тип
     }
 }

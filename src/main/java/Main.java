@@ -30,6 +30,9 @@ public class Main {
             System.out.println("3. Generate objects randomly.");
             System.out.println("4. Print list of objects.");
             System.out.println("5. Write list of objects to the file.");
+            System.out.println("6. Insertion sort.");
+            System.out.println("7. Another sort.");
+            System.out.println("8. Binary search.");
             System.out.println("0. Quit");
             answer = scanner.nextLine();
             switch (answer) {
@@ -54,6 +57,12 @@ public class Main {
                     break;
                 case ("5"):
                     OutputToFile.out(objectList);
+                    break;
+                case ("6"):
+                    break;
+                case ("7"):
+                    break;
+                case ("8"):
                     break;
                 case ("0"):
                     return;
