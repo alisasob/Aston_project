@@ -51,7 +51,7 @@ public class InputFromFile implements InputStrategy{
             }
         }
         String fileName = fileList.get(num - 1);
-        String filePath = "src/main/resources/" + fileName;
+        String filePath = folder + fileName;
         File file = new File(filePath);
 
         try{
