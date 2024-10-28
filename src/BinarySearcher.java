@@ -1,11 +1,11 @@
 public class BinarySearcher {
 
-    public static  int binarySearch(ArrayList<Comparable> array, Comparable element){
+    public static  int binarySearch(ArrayList<Sortable> array, Sortable element){
 
         return binarySearch(array,0, array.size(),element);
     }
 
-    public static int binarySearch(ArrayList<Comparable> array,int leftBorder,int rightBorder, Comparable element){
+    public static int binarySearch(ArrayList<Sortable> array,int leftBorder,int rightBorder, Sortable element){
 
         int middle=leftBorder+((rightBorder-leftBorder)/2);
 
