@@ -13,11 +13,11 @@ import main.java.entity.Sortable;
 public class InputFromFile implements InputStrategy{
     @Override
     public ArrayList<Sortable> getValues() {
+
         ArrayList<Sortable> objectList = new ArrayList<>();
-        System.out.println("Input name of file:");
-        Scanner console = new Scanner(System.in);
-        String fileName = console.nextLine();
-        File file = new File(fileName);
+        String filePath = "src/main/resources/Collection.txt";
+        File file = new File(filePath);
+
         try{
             Scanner scanner = new Scanner(file);
             List<String> stringList = new ArrayList<>();

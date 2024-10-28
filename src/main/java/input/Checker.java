@@ -3,7 +3,7 @@ package main.java.input;
 public class Checker {
 
     public static boolean checkAnimal (String[] a){
-        if (a[0].equals("main.java.entity.Animal") && a[1].equals("species")
+        if (a[0].equals("Animal") && a[1].equals("species")
                 && a[3].equals("eyeColor") && a[5].equals("hasHair")){
             if (checkName(a[2]) && checkName(a[4])
                     && (a[6].equals("true") || a[6].equals("false"))) {
@@ -17,7 +17,7 @@ public class Checker {
     }
 
     public static boolean checkBarrel (String[] b){
-        if (b[0].equals("main.java.entity.Barrel") && b[1].equals("volume")
+        if (b[0].equals("Barrel") && b[1].equals("volume")
                 && b[3].equals("storedMaterial") && b[5].equals("ownMaterial")){
             if (checkName(b[4]) && checkName(b[6])) {
                 try {
@@ -38,7 +38,7 @@ public class Checker {
     }
 
     public static boolean checkPerson (String[] p){
-        if (p[0].equals("main.java.entity.Person") && p[1].equals("gender")
+        if (p[0].equals("Person") && p[1].equals("gender")
                 && p[3].equals("age") && p[5].equals("surname")){
             if (checkName(p[2]) && checkName(p[6])) {
                 try {
