@@ -1,3 +1,5 @@
+package main.java.enums;
+
 public enum MSurname {
     IVANOV ("Ivanov"),
     SMIRNOV ("Smirnov"),
@@ -9,7 +11,7 @@ public enum MSurname {
     LEBEDEV ("Lebedev"),
     PETROV ("Petrov"),
     SAVIN ("Savin");
-    final String title;
+    public final String title;
 
     MSurname(String s) {
         this.title = s;

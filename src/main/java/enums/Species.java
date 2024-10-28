@@ -1,4 +1,4 @@
-import java.util.Random;
+package main.java.enums;
 
 public enum Species {
     CAT ("Cat"),
@@ -10,7 +10,7 @@ public enum Species {
     DINOSAUR ("Dinosaur"),
     RABBIT ("Rabbit"),
     OCTOPUS ("Octopus");
-    final String title;
+    public final String title;
 
     Species(String s) {
         this.title = s;

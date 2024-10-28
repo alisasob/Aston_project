@@ -1,10 +1,15 @@
+package main.java.input;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import main.java.builder.AnimalBuilder;
+import main.java.builder.BarrelBuilder;
+import main.java.builder.PersonBuilder;
 
-public class InputFromFile implements InputStrategy <File>{
+public class InputFromFile implements InputStrategy<File> {
     @Override
     public ArrayList<Object> getValues(File file) {
         AnimalBuilder ab = new AnimalBuilder();

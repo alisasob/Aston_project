@@ -1,4 +1,10 @@
+package main.java.entity;
+
 import java.util.Random;
+import main.java.enums.FSurname;
+import main.java.enums.Gender;
+import main.java.enums.MSurname;
+import main.java.rng.RandomEnumGenerator;
 
 public class Person implements Sortable {
     private final String gender;
@@ -24,23 +30,24 @@ public class Person implements Sortable {
     }
 
     public static Person getRandom(){
-        RandomEnumGenerator gen = new RandomEnumGenerator(Gender.class);
-        Gender gender = (Gender) gen.randomEnum();
+        RandomEnumGenerator<Gender> gen = new RandomEnumGenerator<>(Gender.class);
+        RandomEnumGenerator<FSurname> femaleSurname = new RandomEnumGenerator<>(FSurname.class);
+        RandomEnumGenerator<MSurname> maleSurname = new RandomEnumGenerator<>(MSurname.class);
+
+        Gender gender = gen.randomEnum();
         Random r = new Random();
 
         if (gender.title.equals("male")){
-            RandomEnumGenerator sur = new RandomEnumGenerator(MSurname.class);
-            MSurname surname = (MSurname) sur.randomEnum();
+            MSurname surname = maleSurname.randomEnum();
             return new Person(gender.title, r.nextInt(150), surname.title);
         } else {
-            RandomEnumGenerator sur = new RandomEnumGenerator(FSurname.class);
-            FSurname surname = (FSurname) sur.randomEnum();
+            FSurname surname = femaleSurname.randomEnum();
             return new Person(gender.title, r.nextInt(150), surname.title);
         }
     }
     @Override
     public String toString() {
-        return "Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
+        return "main.java.entity.Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
     }
 
     @Override
@@ -49,9 +56,9 @@ public class Person implements Sortable {
             // Сравнение по возрасту
             return Integer.compare(((Person) object).age, this.age); // Старший идет первым
         } else if (object instanceof Animal) {
-            return 1; // Person идет после Animal
+            return 1; // main.java.entity.Person идет после main.java.entity.Animal
         } else if (object instanceof Barrel) {
-            return 1; // Person идет после Barrel
+            return 1; // main.java.entity.Person идет после main.java.entity.Barrel
         }
         return 0; // Неизвестный тип
     }
