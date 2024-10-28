@@ -9,6 +9,7 @@ import main.java.input.InputContext;
 import main.java.input.InputFromFile;
 import main.java.rng.RandomInput;
 import main.java.output.OutputToFile;
+import main.java.sort.InsertionEvenSort;
 import main.java.sort.InsertionSort;
 import main.java.sort.SortContext;
 
@@ -68,6 +69,8 @@ public class Main {
                     sortContext.sort(objectList);
                     break;
                 case ("7"):
+                    sortContext.setStrategy(new InsertionEvenSort());
+                    sortContext.sort(objectList);
                     break;
                 case ("8"):
                     break;
