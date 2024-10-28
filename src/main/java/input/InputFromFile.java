@@ -15,7 +15,43 @@ public class InputFromFile implements InputStrategy{
     public ArrayList<Sortable> getValues() {
 
         ArrayList<Sortable> objectList = new ArrayList<>();
-        String filePath = "src/main/resources/Collection.txt";
+        ArrayList<String> fileList = new ArrayList<>();
+        Scanner s = new Scanner(System.in);
+        File folder = new File("src/main/resources/");
+        File[] listOfFiles = folder.listFiles();
+        System.out.println("Available files:");
+        int i = 1;
+        if (listOfFiles != null){
+            for (File file : listOfFiles) {
+                if (file.isFile()) {
+                    fileList.add(file.getName());
+                    System.out.println(i + ". " + file.getName());
+                    i++;
+                }
+            }
+        }
+        int num;
+        String str = s.nextLine();
+        try {
+            num = Integer.parseInt(str);
+        }
+        catch (NumberFormatException e) {
+            num = 0;
+        }
+        num = (num >= 1 && num <= i) ? num : 0;
+        while (num == 0){
+            System.out.println("Wrong input, try again.");
+            str = s.nextLine();
+            try {
+                num = Integer.parseInt(str);
+                num = (num >= 1 && num <= i) ? num : 0;
+            }
+            catch (NumberFormatException e) {
+                num = 0;
+            }
+        }
+        String fileName = fileList.get(num - 1);
+        String filePath = "src/main/resources/" + fileName;
         File file = new File(filePath);
 
         try{

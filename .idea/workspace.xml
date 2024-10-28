@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="structure of project edited">
+    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="choosing of file added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InsertionSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertionSorted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/input/InputFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/input/InputFromFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="xzxcrx" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,6 +49,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Алиса\IdeaProjects\aston_project\src\main\resources" />
       <recent name="C:\Users\Алиса\IdeaProjects\aston_project" />
     </key>
   </component>
@@ -153,6 +152,7 @@
     <MESSAGE value="check of data added" />
     <MESSAGE value="random generation added" />
     <MESSAGE value="main menu added" />
-    <option name="LAST_COMMIT_MESSAGE" value="main menu added" />
+    <MESSAGE value="choosing of file added" />
+    <option name="LAST_COMMIT_MESSAGE" value="choosing of file added" />
   </component>
 </project>

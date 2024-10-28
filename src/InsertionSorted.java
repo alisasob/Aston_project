@@ -1,3 +1,5 @@
+import main.java.entity.Sortable;
+
 import java.util.ArrayList;
 
 public class InsertionSorted {
