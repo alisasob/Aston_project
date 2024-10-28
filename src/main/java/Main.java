@@ -68,11 +68,15 @@ public class Main {
                 case ("7"):
                     break;
                 case ("8"):
-                    int index = BinarySearcher.binarySearch(objectList, ConsoleInput.getValue());
-                    if (index != -1){
-                        System.out.println("Index of the element is: " + index);
+                    if (objectList.size() == 0){
+                        System.out.println("List is empty.");
                     } else {
-                        System.out.println("Nothing found.");
+                        int index = BinarySearcher.binarySearch(objectList, ConsoleInput.getValue());
+                        if (index != -1) {
+                            System.out.println("Index of the element is: " + index);
+                        } else {
+                            System.out.println("Nothing found.");
+                        }
                     }
                     break;
                 case ("0"):
