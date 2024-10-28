@@ -1,6 +1,0 @@
-Barrel:volume:567:storedMaterial:Clay:ownMaterial:Wine
-Person:gender:male:age:33:surname:Petrov
-Barrel:volume:645:storedMaterial:PVC:ownMaterial:Wine
-Barrel:volume:567:storedMaterial:Clay:ownMaterial:Wine
-Person:gender:male:age:33:surname:Petrov
-Barrel:volume:645:storedMaterial:PVC:ownMaterial:Wine

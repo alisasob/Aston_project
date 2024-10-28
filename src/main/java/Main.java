@@ -1,26 +1,28 @@
 package main.java;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import main.java.entity.Animal;
-import main.java.entity.Barrel;
-import main.java.entity.Person;
 import main.java.entity.Sortable;
 import main.java.input.ConsoleInput;
 import main.java.input.InputContext;
 import main.java.input.InputFromFile;
 import main.java.rng.RandomInput;
 import main.java.output.OutputToFile;
+import main.java.sort.InsertionSort;
+import main.java.sort.SortContext;
 
-//import main.java.sort.InsertionSort;
 public class Main {
-    public static void main(String[] args) /*throws FileNotFoundException*/ {
+    public static void main(String[] args) {
+
         InputContext inputContext;
+        SortContext sortContext = new SortContext();
+        sortContext.setStrategy(new InsertionSort());
+
         Scanner scanner = new Scanner(System.in);
         String answer = "";
         ArrayList<Sortable> objectList = new ArrayList<>();
+
         while (true) {
             System.out.println("------------------------------");
             System.out.println("Menu");
@@ -59,6 +61,8 @@ public class Main {
                     OutputToFile.out(objectList);
                     break;
                 case ("6"):
+                    sortContext.setStrategy(new InsertionSort());
+                    sortContext.sort(objectList);
                     break;
                 case ("7"):
                     break;
