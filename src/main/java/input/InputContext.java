@@ -1,19 +1,16 @@
 package main.java.input;
 
-import java.util.ArrayList;
 import main.java.entity.Sortable;
 
-public class InputContext {
-    private InputStrategy<?> strategy; // Универсальный тип для стратегии
+import java.util.ArrayList;
 
-    public void setStrategy(InputStrategy<?> strategy) {
-        this.strategy = strategy;
+public class InputContext {
+    private InputStrategy context;
+    public InputContext(InputStrategy context){
+        this.context = context;
     }
 
-    public ArrayList<Sortable> executeStrategy(Object input) {
-        if (strategy == null) {
-            throw new IllegalStateException("Стратегия не установлена");
-        }
-        return strategy.getValues(input);
+    public ArrayList<Sortable> inputValues(){
+        return context.getValues();
     }
 }
