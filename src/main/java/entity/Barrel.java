@@ -57,10 +57,10 @@ public class Barrel implements Sortable {
     }
 
     public Barrel getRandom(){
-        RandomEnumGenerator sm = new RandomEnumGenerator(StoredMaterial.class);
-        RandomEnumGenerator om = new RandomEnumGenerator(OwnMaterial.class);
-        StoredMaterial storedMaterial = (StoredMaterial) sm.randomEnum();
-        OwnMaterial ownMaterial = (OwnMaterial) om.randomEnum();
+        RandomEnumGenerator<StoredMaterial> sm = new RandomEnumGenerator<>(StoredMaterial.class);
+        RandomEnumGenerator<OwnMaterial> om = new RandomEnumGenerator<>(OwnMaterial.class);
+        StoredMaterial storedMaterial = sm.randomEnum();
+        OwnMaterial ownMaterial = om.randomEnum();
         Random r = new Random();
         return Barrel.builder()
                 .ownMaterial(ownMaterial.title)
