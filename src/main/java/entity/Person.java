@@ -59,17 +59,17 @@ public class Person implements Sortable {
     }
 
     public Person getRandom(){
-        RandomEnumGenerator gen = new RandomEnumGenerator(Gender.class);
-        Gender gender = (Gender) gen.randomEnum();
+        RandomEnumGenerator<Gender> gen = new RandomEnumGenerator<>(Gender.class);
+        Gender gender = gen.randomEnum();
         Random r = new Random();
         String surname;
         if (gender.title.equals("male")){
-            RandomEnumGenerator sur = new RandomEnumGenerator(MSurname.class);
-            MSurname msurname = (MSurname) sur.randomEnum();
+            RandomEnumGenerator<MSurname> sur = new RandomEnumGenerator<>(MSurname.class);
+            MSurname msurname = sur.randomEnum();
             surname = msurname.title;
         } else {
-            RandomEnumGenerator sur = new RandomEnumGenerator(FSurname.class);
-            FSurname fsurname = (FSurname) sur.randomEnum();
+            RandomEnumGenerator<FSurname> sur = new RandomEnumGenerator<>(FSurname.class);
+            FSurname fsurname = sur.randomEnum();
             surname = fsurname.title;
         }
         return Person.builder()

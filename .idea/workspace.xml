@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="random generation added">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Checker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EyeColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FSurname.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InputFromFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InputStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MSurname.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OwnMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RandomEnumGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RandomInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Species.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StoredMaterial.java" afterDir="false" />
+    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="structure of project edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Barrel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,9 +44,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Алиса/IdeaProjects/temp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Алиса/IdeaProjects/aston_project&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
@@ -67,7 +54,7 @@
       <recent name="C:\Users\Алиса\IdeaProjects\aston_project" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main.java.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="aston_project" />
@@ -75,8 +62,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main.java.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.Main" />
+      <module name="aston_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main.java.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -91,7 +92,11 @@
       <updated>1729665874497</updated>
       <workItem from="1729665877010" duration="8385000" />
       <workItem from="1729762687990" duration="23318000" />
-      <workItem from="1729897761777" duration="1261000" />
+      <workItem from="1729897761777" duration="1912000" />
+      <workItem from="1729907108198" duration="2835000" />
+      <workItem from="1729934100211" duration="27623000" />
+      <workItem from="1730116703212" duration="1104000" />
+      <workItem from="1730119418863" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="check of data added">
       <created>1729805997802</created>
@@ -100,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729805997802</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="random generation added">
+      <created>1729899387409</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729899387409</updated>
+    </task>
+    <task id="LOCAL-00003" summary="main menu added">
+      <created>1730055884389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730055884389</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +130,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="alisa" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -121,6 +152,7 @@
     <MESSAGE value="basic classes created (Animal, Barrel, Person and Builders)" />
     <MESSAGE value="check of data added" />
     <MESSAGE value="random generation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="random generation added" />
+    <MESSAGE value="main menu added" />
+    <option name="LAST_COMMIT_MESSAGE" value="main menu added" />
   </component>
 </project>

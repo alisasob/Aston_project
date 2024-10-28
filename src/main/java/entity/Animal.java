@@ -58,10 +58,10 @@ public class Animal implements Sortable{
 
 
     public static Animal getRandom(){
-        RandomEnumGenerator spe = new RandomEnumGenerator(Species.class);
-        RandomEnumGenerator ec = new RandomEnumGenerator(EyeColor.class);
-        Species species = (Species) spe.randomEnum();
-        EyeColor eyeColor = (EyeColor) ec.randomEnum();
+        RandomEnumGenerator<Species> spe = new RandomEnumGenerator<>(Species.class);
+        RandomEnumGenerator<EyeColor> ec = new RandomEnumGenerator<>(EyeColor.class);
+        Species species = spe.randomEnum();
+        EyeColor eyeColor = ec.randomEnum();
         Random r = new Random();
         return Animal.builder()
                 .species(species.title)

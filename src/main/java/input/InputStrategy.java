@@ -1,7 +1,9 @@
 package main.java.input;
 
+import main.java.entity.Sortable;
+
 import java.util.ArrayList;
 
 public interface InputStrategy{
-    ArrayList<Object> getValues();
+    ArrayList<Sortable> getValues();
 }
