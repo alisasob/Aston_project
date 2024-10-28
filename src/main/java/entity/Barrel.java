@@ -1,5 +1,9 @@
-import java.util.Random;
+package main.java.entity;
 
+import java.util.Random;
+import main.java.enums.OwnMaterial;
+import main.java.enums.StoredMaterial;
+import main.java.rng.RandomEnumGenerator;
 public class Barrel implements Sortable {
     private final int volume;
     private final String storedMaterial;

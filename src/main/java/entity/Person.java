@@ -1,4 +1,10 @@
+package main.java.entity;
+
 import java.util.Random;
+import main.java.enums.FSurname;
+import main.java.enums.Gender;
+import main.java.enums.MSurname;
+import main.java.rng.RandomEnumGenerator;
 
 public class Person implements Sortable {
     private final String gender;

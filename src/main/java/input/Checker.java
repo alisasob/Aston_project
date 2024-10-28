@@ -1,3 +1,5 @@
+package main.java.input;
+
 public class Checker {
 
     public static boolean checkAnimal (String[] a){

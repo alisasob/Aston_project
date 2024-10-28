@@ -1,10 +1,20 @@
-import java.io.*;
+package main.java;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
+import main.java.entity.Animal;
+import main.java.entity.Barrel;
+import main.java.entity.Person;
+import main.java.entity.Sortable;
+import main.java.input.ConsoleInput;
+import main.java.input.InputContext;
+import main.java.input.InputFromFile;
+import main.java.rng.RandomInput;
+import main.java.output.OutputToFile;
+
+//import main.java.sort.InsertionSort;
 public class Main {
     public static void main(String[] args) /*throws FileNotFoundException*/ {
         InputContext inputContext;

@@ -1,6 +1,11 @@
-import java.util.Random;
+package main.java.entity;
 
-public class Animal {
+import java.util.Random;
+import main.java.enums.EyeColor;
+import main.java.enums.Species;
+import main.java.rng.RandomEnumGenerator;
+
+public class Animal implements Sortable{
     private final String species;
     private final String eyeColor;
     private final boolean hasHair;

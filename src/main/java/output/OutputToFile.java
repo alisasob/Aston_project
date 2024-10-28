@@ -1,3 +1,5 @@
+package main.java.output;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,7 +16,7 @@ public class OutputToFile {
                 System.out.println("New file created!");
             }
             FileWriter fw = new FileWriter(file, true);
-            objectList.forEach(System.out::println);
+            //objectList.forEach(System.out::println);
             objectList.forEach(x-> {
                 try {
                     fw.write(x.toString() + "\n");

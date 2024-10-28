@@ -1,6 +1,13 @@
+package main.java.rng;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
+import main.java.entity.Animal;
+import main.java.entity.Barrel;
+import main.java.entity.Person;
+import main.java.input.InputStrategy;
 
 public class RandomInput implements InputStrategy{
 

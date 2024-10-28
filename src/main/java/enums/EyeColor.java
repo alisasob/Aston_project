@@ -1,4 +1,4 @@
-import java.util.Random;
+package main.java.enums;
 
 public enum EyeColor {
     BLUE ("Blue"),
@@ -7,7 +7,7 @@ public enum EyeColor {
     BROWN ("Brown"),
     RED ("Red");
 
-    final String title;
+    public final String title;
 
     EyeColor(String s){
         this.title = s;
