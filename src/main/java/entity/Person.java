@@ -29,25 +29,58 @@ public class Person implements Sortable {
         return surname;
     }
 
-    public static Person getRandom(){
-        RandomEnumGenerator<Gender> gen = new RandomEnumGenerator<>(Gender.class);
-        RandomEnumGenerator<FSurname> femaleSurname = new RandomEnumGenerator<>(FSurname.class);
-        RandomEnumGenerator<MSurname> maleSurname = new RandomEnumGenerator<>(MSurname.class);
+    public static PersonBuilder builder(){
+        return  new PersonBuilder();
+    }
 
-        Gender gender = gen.randomEnum();
-        Random r = new Random();
+    public static class PersonBuilder{
 
-        if (gender.title.equals("male")){
-            MSurname surname = maleSurname.randomEnum();
-            return new Person(gender.title, r.nextInt(150), surname.title);
-        } else {
-            FSurname surname = femaleSurname.randomEnum();
-            return new Person(gender.title, r.nextInt(150), surname.title);
+        private String gender;
+        private int age;
+        private String surname;
+
+        public PersonBuilder gender(String gender){
+            this.gender = gender;
+            return this;
         }
+
+        public PersonBuilder age(int age){
+            this.age = age;
+            return this;
+
+        }public PersonBuilder surname(String surname){
+            this.surname = surname;
+            return this;
+        }
+
+        public Person getResult(){
+            return new Person(gender, age, surname);
+        }
+    }
+
+    public Person getRandom(){
+        RandomEnumGenerator gen = new RandomEnumGenerator(Gender.class);
+        Gender gender = (Gender) gen.randomEnum();
+        Random r = new Random();
+        String surname;
+        if (gender.title.equals("male")){
+            RandomEnumGenerator sur = new RandomEnumGenerator(MSurname.class);
+            MSurname msurname = (MSurname) sur.randomEnum();
+            surname = msurname.title;
+        } else {
+            RandomEnumGenerator sur = new RandomEnumGenerator(FSurname.class);
+            FSurname fsurname = (FSurname) sur.randomEnum();
+            surname = fsurname.title;
+        }
+        return Person.builder()
+                .gender(gender.title)
+                .age(r.nextInt(90))
+                .surname(surname)
+                .getResult();
     }
     @Override
     public String toString() {
-        return "main.java.entity.Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
+        return "Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
     }
 
     @Override
@@ -56,9 +89,9 @@ public class Person implements Sortable {
             // Сравнение по возрасту
             return Integer.compare(((Person) object).age, this.age); // Старший идет первым
         } else if (object instanceof Animal) {
-            return 1; // main.java.entity.Person идет после main.java.entity.Animal
+            return 1; // Person идет после Animal
         } else if (object instanceof Barrel) {
-            return 1; // main.java.entity.Person идет после main.java.entity.Barrel
+            return 1; // Person идет после Barrel
         }
         return 0; // Неизвестный тип
     }
