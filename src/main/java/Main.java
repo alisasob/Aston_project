@@ -2,77 +2,107 @@ package main.java;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
 import main.java.entity.Animal;
 import main.java.entity.Barrel;
 import main.java.entity.Person;
 import main.java.entity.Sortable;
-import main.java.sort.InsertionSort;
+import main.java.input.ConsoleInput;
+import main.java.input.InputContext;
+import main.java.input.InputFromFile;
+import main.java.rng.RandomInput;
+import main.java.output.OutputToFile;
 
+//import main.java.sort.InsertionSort;
 public class Main {
     public static void main(String[] args) /*throws FileNotFoundException*/ {
-//        main.java.builder.AnimalBuilder ab = new main.java.builder.AnimalBuilder();
-//        ab.setValues("cat", "green", true);
-//        main.java.entity.Animal a = ab.getResult();
-//        main.java.builder.BarrelBuilder bb = new main.java.builder.BarrelBuilder();
-//        bb.setValues(10, "oil", "metal");
-//        main.java.entity.Barrel b = bb.getResult();
-//        main.java.builder.PersonBuilder pb = new main.java.builder.PersonBuilder();
-//        pb.setValues("male", 22, "Ivanov");
-//        main.java.entity.Person p = pb.getResult();
-        //Stream.of(a, b, p).forEach(x->System.out.println(x.toString()));
+        InputContext inputContext;
+        Scanner scanner = new Scanner(System.in);
+        String answer = "";
+        ArrayList<Object> objectList = new ArrayList<>();
+        while (!answer.equals("0")) {
+            System.out.println("------------------------------");
+            System.out.println("Menu");
+            System.out.println("------------------------------");
+            System.out.println("1. Input objects from console.");
+            System.out.println("2. Input objects from file.");
+            System.out.println("3. Generate objects randomly.");
+            System.out.println("4. Print list of objects.");
+            System.out.println("5. Write list of objects to the file.");
+            System.out.println("0. Quit");
+            answer = scanner.nextLine();
+            switch (answer) {
+                case ("1"):
+                    inputContext = new InputContext(new ConsoleInput());
+                    objectList.addAll(inputContext.inputValues());
+                    break;
+                case ("2"):
+                    inputContext = new InputContext(new InputFromFile());
+                    objectList.addAll(inputContext.inputValues());
+                    break;
+                case ("3"):
+                    inputContext = new InputContext(new RandomInput());
+                    objectList.addAll(inputContext.inputValues());
+                    break;
+                case ("4"):
+                    if (objectList.size() == 0){
+                        System.out.println("List is empty.");
+                    }else {
+                        objectList.forEach(System.out::println);
+                    }
+                    break;
+                case ("5"):
+                    OutputToFile.out(objectList);
+                    break;
+                case ("0"):
+                    return;
+                default:
+                    System.out.println("Wrong input. Try again.");
+            }
 
-
-        List<Sortable> items = new ArrayList<>();
-
-        items.add(new Animal("Cat", "Green", true));
-        items.add(new Barrel(50, "Water", "Wood"));
-        items.add(new Person("Female", 40, "Smith"));
-        items.add(new Animal("Dog", "Brown", false));
-        items.add(new Barrel(30, "Oil", "Metal"));
-        items.add(new Animal("Cat", "Green", false));
-        items.add(new Barrel(49, "Water", "Wood"));
-        items.add(new Barrel(50, "Water", "Wood"));
-        items.add(new Barrel(40, "Water", "Wood"));
-        items.add(new Barrel(35, "Water", "Wood"));
-        items.add(new Person("Female", 5, "Smith"));
-        items.add(new Person("Female", 7, "Smith"));
-        items.add(new Person("Female", 3, "Smith"));
-        items.add(new Animal("Dog", "Brown", true));
-        items.add(new Barrel(30, "Oil", "Metal"));
-        items.add(new Animal("Cat", "Green", true));
-        items.add(new Barrel(11, "Water", "Wood"));
-        items.add(new Person("Female", 10, "Smith"));
-        items.add(new Animal("Dog", "Brown", true));
-        items.add(new Barrel(1, "Oil", "Metal"));
-
-        InsertionSort.insertionSort(items);
-        //InsertionSortPlus.customSort(items);
-
-        for (Sortable item : items) {
-            System.out.println(item);
         }
-
-//        File file = new File("Collection.txt");
-//        main.java.input.InputFromFile fInput = new main.java.input.InputFromFile();
-//        objectList = fInput.getValues(file);
-//        objectList.stream().forEach(x -> System.out.println(x.getClass()));
-
-//        System.out.println(main.java.entity.Animal.getRandom());
-//        System.out.println(main.java.entity.Animal.getRandom());
-//        System.out.println(main.java.entity.Animal.getRandom());
-//        System.out.println(main.java.entity.Barrel.getRandom());
-//        System.out.println(main.java.entity.Barrel.getRandom());
-//        System.out.println(main.java.entity.Barrel.getRandom());
-//        System.out.println(main.java.entity.Person.getRandom());
-//        System.out.println(main.java.entity.Person.getRandom());
-//        System.out.println(main.java.entity.Person.getRandom());
-
-//        main.java.rng.RandomInput rInput = new main.java.rng.RandomInput();
-//        objectList = rInput.getValues(10);
-//        objectList.stream().forEach(x -> System.out.println(x));
-//        //System.out.println(objectList);
 
     }
 
+//        AnimalBuilder ab = new AnimalBuilder();
+//        ab.setValues("cat", "green", true);
+//        Animal a = ab.getResult();
+//        BarrelBuilder bb = new BarrelBuilder();
+//        bb.setValues(10, "oil", "metal");
+//        Barrel b = bb.getResult();
+//        PersonBuilder pb = new PersonBuilder();
+//        pb.setValues("male", 22, "Ivanov");
+//        Person p = pb.getResult();
+//        Stream.of(a, b, p).forEach(x->System.out.println(x.toString()));
+
+
+
+
+//        ArrayList<Object> objectList;
+//        File file = new File("Collection.txt");
+//        InputFromFile fInput = new InputFromFile();
+//        objectList = fInput.getValues();
+//        objectList.stream().forEach(x -> System.out.println(x));
+
+//        ArrayList<Object> objectList;
+//        ConsoleInput cInput = new ConsoleInput();
+//        objectList = cInput.getValues();
+//        objectList.stream().forEach(x -> System.out.println(x));
+
+//        System.out.println(Animal.getRandom());
+//        System.out.println(Animal.getRandom());
+//        System.out.println(Animal.getRandom());
+//        System.out.println(Barrel.getRandom());
+//        System.out.println(Barrel.getRandom());
+//        System.out.println(Barrel.getRandom());
+//        System.out.println(Person.getRandom());
+//        System.out.println(Person.getRandom());
+//        System.out.println(Person.getRandom());
+
+
+//        System.out.println(Person.builder().getResult().getRandom());
+
+    //System.out.println(objectList);
 
 }
