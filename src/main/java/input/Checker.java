@@ -17,7 +17,7 @@ public class Checker {
     }
 
     public static boolean checkBarrel (String[] b){
-        if (b[0].equals("main.java.entity.Barrel") && b[1].equals("volume")
+        if (b[0].equals("Barrel") && b[1].equals("volume")
                 && b[3].equals("storedMaterial") && b[5].equals("ownMaterial")){
             if (checkName(b[4]) && checkName(b[6])) {
                 try {
@@ -38,7 +38,7 @@ public class Checker {
     }
 
     public static boolean checkPerson (String[] p){
-        if (p[0].equals("main.java.entity.Person") && p[1].equals("gender")
+        if (p[0].equals("Person") && p[1].equals("gender")
                 && p[3].equals("age") && p[5].equals("surname")){
             if (checkName(p[2]) && checkName(p[6])) {
                 try {
