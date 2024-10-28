@@ -1,19 +1,17 @@
 package main.java.input;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import main.java.entity.Animal;
 import main.java.entity.Barrel;
 import main.java.entity.Person;
+import main.java.entity.Sortable;
 
 public class ConsoleInput implements InputStrategy{
 
     @Override
-    public ArrayList<Object> getValues() {
-        ArrayList<Object> objectList = new ArrayList<>();
+    public ArrayList<Sortable> getValues() {
+        ArrayList<Sortable> objectList = new ArrayList<Sortable>();
         Scanner scanner = new Scanner(System.in);
         int num;
         int n;

@@ -1,5 +1,7 @@
 package main.java.input;
 
+import main.java.entity.Sortable;
+
 import java.util.ArrayList;
 
 public class InputContext {
@@ -8,7 +10,7 @@ public class InputContext {
         this.context = context;
     }
 
-    public ArrayList<Object> inputValues(){
+    public ArrayList<Sortable> inputValues(){
         return context.getValues();
     }
 }

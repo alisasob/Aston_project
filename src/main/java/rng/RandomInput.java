@@ -7,13 +7,14 @@ import java.util.Scanner;
 import main.java.entity.Animal;
 import main.java.entity.Barrel;
 import main.java.entity.Person;
+import main.java.entity.Sortable;
 import main.java.input.InputStrategy;
 
 public class RandomInput implements InputStrategy{
 
     @Override
-    public ArrayList<Object> getValues() {
-        ArrayList<Object> objectList = new ArrayList<>();
+    public ArrayList<Sortable> getValues() {
+        ArrayList<Sortable> objectList = new ArrayList<>();
         Random r = new Random();
         Scanner scanner = new Scanner(System.in);
         int n;

@@ -1,11 +1,13 @@
 package main.java.output;
 
+import main.java.entity.Sortable;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class OutputToFile {
-    public static void out(ArrayList<Object> objectList) {
+    public static void out(ArrayList<Sortable> objectList) {
         System.out.println("Input name of file:");
         Scanner console = new Scanner(System.in);
         String fileName = console.nextLine();

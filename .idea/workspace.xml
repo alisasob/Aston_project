@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="structure of project edited">
+    <list default="true" id="63154b3b-2543-4101-b5a0-79e4314d5c6a" name="Changes" comment="menu extended">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Barrel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Sortable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/input/ConsoleInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/input/ConsoleInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/input/InputContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/input/InputContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/input/InputFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/input/InputFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/input/InputStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/input/InputStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/output/OutputToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/output/OutputToFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rng/RandomInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rng/RandomInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,8 @@
       <workItem from="1729907108198" duration="2835000" />
       <workItem from="1729934100211" duration="27623000" />
       <workItem from="1730116703212" duration="1104000" />
-      <workItem from="1730119418863" duration="325000" />
+      <workItem from="1730119418863" duration="3660000" />
+      <workItem from="1730126519404" duration="533000" />
     </task>
     <task id="LOCAL-00001" summary="check of data added">
       <created>1729805997802</created>
@@ -119,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730055884389</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="menu extended">
+      <created>1730119991653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730119991653</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +163,7 @@
     <MESSAGE value="check of data added" />
     <MESSAGE value="random generation added" />
     <MESSAGE value="main menu added" />
-    <option name="LAST_COMMIT_MESSAGE" value="main menu added" />
+    <MESSAGE value="menu extended" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu extended" />
   </component>
 </project>

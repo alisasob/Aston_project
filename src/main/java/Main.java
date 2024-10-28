@@ -20,8 +20,8 @@ public class Main {
         InputContext inputContext;
         Scanner scanner = new Scanner(System.in);
         String answer = "";
-        ArrayList<Object> objectList = new ArrayList<>();
-        while (!answer.equals("0")) {
+        ArrayList<Sortable> objectList = new ArrayList<>();
+        while (true) {
             System.out.println("------------------------------");
             System.out.println("Menu");
             System.out.println("------------------------------");
