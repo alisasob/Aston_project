@@ -8,10 +8,12 @@ import java.util.Scanner;
 import main.java.entity.Animal;
 import main.java.entity.Barrel;
 import main.java.entity.Person;
+import main.java.entity.Sortable;
+
 public class InputFromFile implements InputStrategy{
     @Override
-    public ArrayList<Object> getValues() {
-        ArrayList<Object> objectList = new ArrayList<>();
+    public ArrayList<Sortable> getValues() {
+        ArrayList<Sortable> objectList = new ArrayList<>();
         System.out.println("Input name of file:");
         Scanner console = new Scanner(System.in);
         String fileName = console.nextLine();
