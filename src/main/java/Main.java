@@ -3,6 +3,7 @@ package main.java;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import main.java.entity.Animal;
 import main.java.entity.Sortable;
 import main.java.input.ConsoleInput;
 import main.java.input.InputContext;
@@ -11,6 +12,7 @@ import main.java.rng.RandomInput;
 import main.java.output.OutputToFile;
 import main.java.sort.InsertionSort;
 import main.java.sort.SortContext;
+import main.java.search.BinarySearcher;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +24,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String answer = "";
         ArrayList<Sortable> objectList = new ArrayList<>();
-
         while (true) {
             System.out.println("------------------------------");
             System.out.println("Menu");
@@ -67,6 +68,12 @@ public class Main {
                 case ("7"):
                     break;
                 case ("8"):
+                    int index = BinarySearcher.binarySearch(objectList, ConsoleInput.getValue());
+                    if (index != -1){
+                        System.out.println("Index of the element is: " + index);
+                    } else {
+                        System.out.println("Nothing found.");
+                    }
                     break;
                 case ("0"):
                     return;
