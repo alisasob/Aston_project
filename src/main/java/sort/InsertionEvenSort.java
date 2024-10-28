@@ -12,7 +12,6 @@ public class InsertionEvenSort implements SortStrategy {
     @Override
     public void sort(List<Sortable> sortableList) {
 
-
         List<Integer> listPosition = new ArrayList<>();
         List<Sortable> listEven = new ArrayList<>();
 
@@ -41,8 +40,9 @@ public class InsertionEvenSort implements SortStrategy {
 
         InsertionSort insertionSort = new InsertionSort();
         insertionSort.sort(listEven);
+
         for(int i = 0; i < listPosition.size(); i++){
-            sortableList.set(i, listEven.get(i));
+            sortableList.set(listPosition.get(i), listEven.get(i));
         }
     }
 }
