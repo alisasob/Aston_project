@@ -1,4 +1,9 @@
+package main.java.entity;
+
 import java.util.Random;
+import main.java.enums.EyeColor;
+import main.java.enums.Species;
+import main.java.rng.RandomEnumGenerator;
 
 public class Animal implements Sortable {
     private final String species;
@@ -25,17 +30,19 @@ public class Animal implements Sortable {
 
 
     public static Animal getRandom(){
-        RandomEnumGenerator spe = new RandomEnumGenerator(Species.class);
-        RandomEnumGenerator ec = new RandomEnumGenerator(EyeColor.class);
-        Species species = (Species) spe.randomEnum();
-        EyeColor eyeColor = (EyeColor) ec.randomEnum();
+        RandomEnumGenerator<Species> spe = new RandomEnumGenerator<>(Species.class);
+        RandomEnumGenerator<EyeColor> ec = new RandomEnumGenerator<>(EyeColor.class);
+
+        Species species = spe.randomEnum();
+        EyeColor eyeColor = ec.randomEnum();
         Random r = new Random();
+
         return new Animal(species.title, eyeColor.title, r.nextBoolean());
     }
 
     @Override
     public String toString() {
-        return "Animal:species:" + getSpecies() + ":eyeColor:" + getEyeColor() + ":hasHair:" + isHasHair();
+        return "main.java.entity.Animal:species:" + getSpecies() + ":eyeColor:" + getEyeColor() + ":hasHair:" + isHasHair();
     }
 
     @Override
@@ -50,9 +57,9 @@ public class Animal implements Sortable {
             // Если оба имеют или не имеют шерсть, сравниваем по виду
             return this.species.compareTo(((Animal) object).species);
         } else if (object instanceof Barrel) {
-            return -1; // Animal идет перед Barrel
+            return -1; // main.java.entity.Animal идет перед main.java.entity.Barrel
         } else if (object instanceof Person) {
-            return -1; // Animal идет перед Person
+            return -1; // main.java.entity.Animal идет перед main.java.entity.Person
         }
         return 0; // Неизвестный тип
     }

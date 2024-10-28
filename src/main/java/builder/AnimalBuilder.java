@@ -1,3 +1,7 @@
+package main.java.builder;
+
+import main.java.entity.Animal;
+
 public class AnimalBuilder implements Builder<String, String, Boolean> {
     private String species;
     private String eyeColor;

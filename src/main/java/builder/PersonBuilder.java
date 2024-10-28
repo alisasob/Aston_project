@@ -1,4 +1,8 @@
-public class PersonBuilder implements Builder<String, Integer, String>{
+package main.java.builder;
+
+import main.java.entity.Person;
+
+public class PersonBuilder implements Builder<String, Integer, String> {
     private String gender;
     private int age;
     private String surname;

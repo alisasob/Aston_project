@@ -1,3 +1,7 @@
+package main.java.builder;
+
+import main.java.entity.Barrel;
+
 public class BarrelBuilder implements Builder<Integer, String, String> {
     private int volume;
     private String storedMaterial;
