@@ -39,14 +39,17 @@ public class Main {
             answer = scanner.nextLine();
             switch (answer) {
                 case ("1"):
+                    objectList.clear();
                     inputContext = new InputContext(new ConsoleInput());
                     objectList.addAll(inputContext.inputValues());
                     break;
                 case ("2"):
+                    objectList.clear();
                     inputContext = new InputContext(new InputFromFile());
                     objectList.addAll(inputContext.inputValues());
                     break;
                 case ("3"):
+                    objectList.clear();
                     inputContext = new InputContext(new RandomInput());
                     objectList.addAll(inputContext.inputValues());
                     break;
