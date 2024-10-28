@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import main.java.entity.Sortable;
+
 public class BinarySearcher {
 
     public static  int binarySearch(ArrayList<Sortable> array, Sortable element){
