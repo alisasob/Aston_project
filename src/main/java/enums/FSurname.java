@@ -1,3 +1,5 @@
+package main.java.enums;
+
 public enum FSurname {
     IVANOVA ("Ivanova"),
     SMIRNOVA ("Smirnova"),
@@ -9,7 +11,7 @@ public enum FSurname {
     LEBEDEVA ("Lebedeva"),
     PETROVA ("Petrova"),
     ROSTOVA ("Rostova");
-    final String title;
+    public final String title;
 
     FSurname(String s) {
         this.title = s;

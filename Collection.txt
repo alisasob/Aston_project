@@ -1,5 +1,6 @@
-Animal:species:Dog:eyeColor:Blue:hasHair:true
-Animal:species:Frog:eyeColor:Yellow:hasHair:false
-Animal:species:Pig:eyeColor:Grey:hasHair:false
-Person:gender:female:age:23:surname:Lastochkina
-Barrel:volume:10:storedMaterial:Sand:ownMaterial:Wood
+Barrel:volume:567:storedMaterial:Clay:ownMaterial:Wine
+Person:gender:male:age:33:surname:Petrov
+Barrel:volume:645:storedMaterial:PVC:ownMaterial:Wine
+Barrel:volume:567:storedMaterial:Clay:ownMaterial:Wine
+Person:gender:male:age:33:surname:Petrov
+Barrel:volume:645:storedMaterial:PVC:ownMaterial:Wine

@@ -1,9 +1,11 @@
+package main.java.enums;
+
 public enum OwnMaterial {
     WOOD ("Wood"),
     METAL ("Metal"),
     PVC ("PVC"),
     CLAY ("Clay");
-    final String title;
+    public final String title;
 
     OwnMaterial(String s) {
         this.title = s;
