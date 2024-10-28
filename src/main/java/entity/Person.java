@@ -47,7 +47,7 @@ public class Person implements Sortable {
     }
     @Override
     public String toString() {
-        return "main.java.entity.Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
+        return "Person:gender:" + getGender() + ":age:" + getAge() + ":surname:" + getSurname();
     }
 
     @Override

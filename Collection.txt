@@ -1,5 +1,0 @@
-main.java.entity.Animal:species:Dog:eyeColor:Blue:hasHair:true
-main.java.entity.Animal:species:Frog:eyeColor:Yellow:hasHair:false
-main.java.entity.Animal:species:Pig:eyeColor:Grey:hasHair:false
-main.java.entity.Person:gender:female:age:23:surname:Lastochkina
-main.java.entity.Barrel:volume:10:storedMaterial:Sand:ownMaterial:Wood

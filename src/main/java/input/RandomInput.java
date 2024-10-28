@@ -1,20 +1,20 @@
-package main.java.rng;
+package main.java.input;
 
 import java.util.ArrayList;
 import java.util.Random;
 import main.java.entity.Animal;
 import main.java.entity.Barrel;
 import main.java.entity.Person;
-import main.java.input.InputStrategy;
+import main.java.entity.Sortable;
 
 public class RandomInput implements InputStrategy<Integer> {
 
     @Override
-    public ArrayList<Object> getValues(Integer n) {
-        ArrayList<Object> objectList = new ArrayList<>();
+    public ArrayList<Sortable> getValues(Object n) {
+        ArrayList<Sortable> objectList = new ArrayList<>();
         Random r = new Random();
         int t;
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < (Integer) n; i++){
             t = r.nextInt(3);
             switch (t) {
                 case (0) -> objectList.add(Animal.getRandom());

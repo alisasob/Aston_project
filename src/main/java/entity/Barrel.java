@@ -41,7 +41,7 @@ public class Barrel implements Sortable {
 
     @Override
     public String toString() {
-        return "main.java.entity.Barrel:volume:" + getVolume() + ":storedMaterial:" + getStoredMaterial() + ":ownMaterial:" + getOwnMaterial();
+        return "Barrel:volume:" + getVolume() + ":storedMaterial:" + getStoredMaterial() + ":ownMaterial:" + getOwnMaterial();
     }
 
     @Override

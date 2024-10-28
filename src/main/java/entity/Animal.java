@@ -42,7 +42,7 @@ public class Animal implements Sortable {
 
     @Override
     public String toString() {
-        return "main.java.entity.Animal:species:" + getSpecies() + ":eyeColor:" + getEyeColor() + ":hasHair:" + isHasHair();
+        return "Animal:species:" + getSpecies() + ":eyeColor:" + getEyeColor() + ":hasHair:" + isHasHair();
     }
 
     @Override
