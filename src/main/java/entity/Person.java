@@ -86,8 +86,19 @@ public class Person implements Sortable {
     @Override
     public int compareTo(Sortable object) {
         if (object instanceof Person) {
-            // Сравнение по возрасту
-            return Integer.compare(((Person) object).age, this.age); // Старший идет первым
+            int t;
+            // Сравнение по фамилии
+            t = this.surname.toLowerCase().compareTo(((Person) object).surname.toLowerCase());
+            if (t != 0) {
+                return t;
+            }
+            // сравнение по возрасту
+            t = Integer.compare(((Person) object).age, this.age); // Старший идет первым
+            if (t != 0) {
+                return t;
+            }// сравнение по полу
+            t = this.gender.toLowerCase().compareTo(((Person) object).gender.toLowerCase());
+            return t;
         } else if (object instanceof Animal) {
             return 1; // Person идет после Animal
         } else if (object instanceof Barrel) {

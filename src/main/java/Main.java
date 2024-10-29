@@ -2,15 +2,16 @@ package main.java;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import main.java.entity.Sortable;
 import main.java.input.ConsoleInput;
 import main.java.input.InputContext;
 import main.java.input.InputFromFile;
-import main.java.rng.RandomInput;
+import main.java.input.RandomInput;
 import main.java.output.OutputToFile;
+import main.java.sort.InsertionEvenSort;
 import main.java.sort.InsertionSort;
 import main.java.sort.SortContext;
+import main.java.search.BinarySearcher;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,21 +40,25 @@ public class Main {
             answer = scanner.nextLine();
             switch (answer) {
                 case ("1"):
+                    objectList.clear();
                     inputContext = new InputContext(new ConsoleInput());
                     objectList.addAll(inputContext.inputValues());
                     break;
                 case ("2"):
+                    objectList.clear();
                     inputContext = new InputContext(new InputFromFile());
                     objectList.addAll(inputContext.inputValues());
                     break;
                 case ("3"):
+                    objectList.clear();
                     inputContext = new InputContext(new RandomInput());
                     objectList.addAll(inputContext.inputValues());
                     break;
                 case ("4"):
                     if (objectList.size() == 0){
                         System.out.println("List is empty.");
-                    }else {
+                    }
+                    else {
                         objectList.forEach(System.out::println);
                     }
                     break;
@@ -65,57 +70,27 @@ public class Main {
                     sortContext.sort(objectList);
                     break;
                 case ("7"):
+                    sortContext.setStrategy(new InsertionEvenSort());
+                    sortContext.sort(objectList);
                     break;
                 case ("8"):
+                    if (objectList.size() == 0){
+                        System.out.println("List is empty.");
+                    }
+                    else {
+                        int index = BinarySearcher.binarySearch(objectList, ConsoleInput.getValue());
+                        if (index != -1) {
+                            System.out.println("Index of the element is: " + index);
+                        } else {
+                            System.out.println("Nothing found.");
+                        }
+                    }
                     break;
                 case ("0"):
                     return;
                 default:
                     System.out.println("Wrong input. Try again.");
             }
-
         }
-
     }
-
-//        AnimalBuilder ab = new AnimalBuilder();
-//        ab.setValues("cat", "green", true);
-//        Animal a = ab.getResult();
-//        BarrelBuilder bb = new BarrelBuilder();
-//        bb.setValues(10, "oil", "metal");
-//        Barrel b = bb.getResult();
-//        PersonBuilder pb = new PersonBuilder();
-//        pb.setValues("male", 22, "Ivanov");
-//        Person p = pb.getResult();
-//        Stream.of(a, b, p).forEach(x->System.out.println(x.toString()));
-
-
-
-
-//        ArrayList<Object> objectList;
-//        File file = new File("Collection.txt");
-//        InputFromFile fInput = new InputFromFile();
-//        objectList = fInput.getValues();
-//        objectList.stream().forEach(x -> System.out.println(x));
-
-//        ArrayList<Object> objectList;
-//        ConsoleInput cInput = new ConsoleInput();
-//        objectList = cInput.getValues();
-//        objectList.stream().forEach(x -> System.out.println(x));
-
-//        System.out.println(Animal.getRandom());
-//        System.out.println(Animal.getRandom());
-//        System.out.println(Animal.getRandom());
-//        System.out.println(Barrel.getRandom());
-//        System.out.println(Barrel.getRandom());
-//        System.out.println(Barrel.getRandom());
-//        System.out.println(Person.getRandom());
-//        System.out.println(Person.getRandom());
-//        System.out.println(Person.getRandom());
-
-
-//        System.out.println(Person.builder().getResult().getRandom());
-
-    //System.out.println(objectList);
-
 }
