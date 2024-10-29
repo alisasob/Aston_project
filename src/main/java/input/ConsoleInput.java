@@ -184,7 +184,7 @@ public class ConsoleInput implements InputStrategy{
         Scanner scanner = new Scanner(System.in);
         int num;
         String str;
-        System.out.println("What object do you want to create?");
+        System.out.println("What object do you want to find?");
         System.out.println("1. Animal");
         System.out.println("2. Barrel");
         System.out.println("3. Person");

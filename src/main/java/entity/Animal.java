@@ -78,6 +78,7 @@ public class Animal implements Sortable{
     @Override
     public int compareTo(Sortable object) {
         if (object instanceof Animal) {
+            int t;
             // Сравнение по наличию шерсти
             if (this.hasHair && !((Animal) object).hasHair) {
                 return -1; // Этот объект идет первым
@@ -85,7 +86,13 @@ public class Animal implements Sortable{
                 return 1; // Этот объект идет последним
             }
             // Если оба имеют или не имеют шерсть, сравниваем по виду
-            return this.species.compareTo(((Animal) object).species);
+            t = this.species.toLowerCase().compareTo(((Animal) object).species.toLowerCase());
+            if (t != 0){
+                return t;
+            }
+            // Если оба одного вида, сравниваем по цвету глаз
+            t = this.eyeColor.toLowerCase().compareTo(((Animal) object).eyeColor.toLowerCase());
+            return t;
         } else if (object instanceof Barrel) {
             return -1; // Animal идет перед Barrel
         } else if (object instanceof Person) {
