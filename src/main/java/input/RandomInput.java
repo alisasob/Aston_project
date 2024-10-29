@@ -1,4 +1,4 @@
-package main.java.rng;
+package main.java.input;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -8,9 +8,8 @@ import main.java.entity.Animal;
 import main.java.entity.Barrel;
 import main.java.entity.Person;
 import main.java.entity.Sortable;
-import main.java.input.InputStrategy;
 
-public class RandomInput implements InputStrategy{
+public class RandomInput implements InputStrategy {
 
     @Override
     public ArrayList<Sortable> getValues() {

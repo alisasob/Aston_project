@@ -4,6 +4,7 @@ import main.java.entity.Sortable;
 
 import java.util.ArrayList;
 
-public interface InputStrategy{
+public interface InputStrategy {
+
     ArrayList<Sortable> getValues();
 }
