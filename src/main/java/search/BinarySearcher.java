@@ -1,5 +1,5 @@
 package main.java.search;
-
+import java.util.ArrayList;
 import main.java.entity.Sortable;
 
 public class BinarySearcher {
@@ -13,8 +13,11 @@ public class BinarySearcher {
 
         int middle=leftBorder+((rightBorder-leftBorder)/2);
 
+        if((middle==leftBorder)&&(element!=array.get(middle))) return -1;
+        else if(array.get(middle).compareTo(element)>0){
             return binarySearch(array,leftBorder,middle,element);
         }else if(array.get(middle).compareTo(element)<0){
             return  binarySearch(array,middle,rightBorder,element);
+        }else    return middle;
     }
 }
