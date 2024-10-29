@@ -1,8 +1,9 @@
 package main.java.output;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import main.java.entity.Sortable;
-
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 

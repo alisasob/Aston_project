@@ -1,7 +1,6 @@
 package main.java.search;
 
 import main.java.entity.Sortable;
-
 import java.util.ArrayList;
 
 public class BinarySearcher {
@@ -15,8 +14,7 @@ public class BinarySearcher {
 
         int middle = leftBorder + ((rightBorder - leftBorder) / 2);
 
- //       if ((middle == leftBorder) && (element != array.get(middle))){
-            if ((middle == leftBorder) && (array.get(middle).compareTo(element) != 0)){
+        if ((middle == leftBorder) && (array.get(middle).compareTo(element) != 0)) {
             return -1;
         } else if(array.get(middle).compareTo(element) > 0){
             return binarySearch(array,leftBorder,middle,element);

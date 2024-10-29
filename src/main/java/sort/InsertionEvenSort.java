@@ -1,6 +1,5 @@
 package main.java.sort;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import main.java.entity.Animal;

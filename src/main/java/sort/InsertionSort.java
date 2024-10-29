@@ -3,7 +3,7 @@ package main.java.sort;
 import java.util.List;
 import main.java.entity.Sortable;
 
-public class InsertionSort implements SortStrategy{
+public class InsertionSort implements SortStrategy {
     public void sort(List<Sortable> items) {
         for (int i = 1; i < items.size(); i++) {
             Sortable key = items.get(i);

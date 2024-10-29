@@ -99,7 +99,7 @@ public class InputFromFile implements InputStrategy{
         } catch (FileNotFoundException e) {
             System.out.println("File not found.");
         }
-        //stringList.stream().forEach(System.out::println);
+
         if (objectList.size() == 0){
             System.out.println("Could not input anything. Wrong data format.");
         }
