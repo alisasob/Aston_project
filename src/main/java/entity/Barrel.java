@@ -10,7 +10,7 @@ public class Barrel implements Sortable {
     private final String storedMaterial;
     private final String ownMaterial;
 
-    public Barrel(int volume, String storedMaterial, String ownMaterial){
+    public Barrel(int volume, String ownMaterial, String storedMaterial){
         this.volume = volume;
         this.storedMaterial = storedMaterial;
         this.ownMaterial = ownMaterial;
@@ -77,8 +77,19 @@ public class Barrel implements Sortable {
     @Override
     public int compareTo(Sortable object) {
         if (object instanceof Barrel) {
+            int t;
             // Сравнение по объему
-            return Integer.compare(((Barrel) object).volume, this.volume); // Больший объем идет первым
+            t = Integer.compare(((Barrel) object).volume, this.volume); // Больший объем идет первым
+            if (t != 0) {
+                return t;
+            }
+            // сравнение по материалу, из которого изготовлена
+            t = this.ownMaterial.toLowerCase().compareTo(((Barrel) object).ownMaterial.toLowerCase());
+            if (t != 0) {
+                return t;
+            }// сравнение по хранимому материалу
+            t = this.storedMaterial.toLowerCase().compareTo(((Barrel) object).storedMaterial.toLowerCase());
+            return t;
         } else if (object instanceof Animal) {
             return 1; // Barrel идет после Animal
         } else if (object instanceof Person) {

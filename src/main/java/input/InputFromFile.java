@@ -68,30 +68,24 @@ public class InputFromFile implements InputStrategy{
             for (String string : stringList){
                 temp = string.split(":");
                 if (temp.length == 7) {
-                    //System.out.println(Arrays.toString(temp));
-                    //System.out.println(temp.length);
-                    //System.out.println(temp[0]);
                     if (temp[0].equals("Animal") && Checker.checkAnimal(temp)) {
                         objectList.add(Animal.builder()
                                 .species(temp[2])
                                 .eyeColor(temp[4])
                                 .hasHair(Boolean.parseBoolean(temp[6]))
                                 .getResult());
-                        //System.out.println(ab.getResult());
                     } else if (temp[0].equals("Barrel") && Checker.checkBarrel(temp)) {
                         objectList.add(Barrel.builder()
                                 .volume(Integer.parseInt(temp[2]))
                                 .storedMaterial(temp[4])
                                 .ownMaterial(temp[6])
                                 .getResult());
-                        //System.out.println(bb.getResult());
                     } else if (temp[0].equals("Person") && Checker.checkPerson(temp)) {
                         objectList.add(Person.builder()
                                 .gender(temp[2])
                                 .age(Integer.parseInt(temp[4]))
                                 .surname(temp[6])
                                 .getResult());
-                        //System.out.println(pb.getResult());
                     }
                 }
                 scanner.close();
